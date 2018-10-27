@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="ch">
+    <head>
+        <meta charset="utf-8">
+        <title>订单</title>
+        <link ref="stylesheet" href="style.css">
+        <script src="modernizr.js"></script>
+        <script src="app.js"></script>
+        <body>
+            <!--定义form元素，顶部的页眉和底部的两个按钮-->
+            <form name="order" method="post" action="/submit">
+            <h1>订单表</h1>
+            <!--创建详细的联系方式列表-->
+            <fieldset>
+                     <legend>联系人详情</legend>
+                     <ul>
+                         <li>
+                             <label class="required">
+                                 <div>姓名</div>
+                                 <input name="name" required autofocus>
+                             </label>
+                             <label class="required">
+                                    <div> 邮箱</div>
+                                    <input name="email" required autofocus>
+                                </label>
+                         </li>
+                         <li>
+                             <label>
+                                 <div>邮政地址</div>
+                                 <input name="address1" placeholder="地址1">
+                             </label>
+                             <div>&nbsp;</div>
+                             <input name="address2" placeholder="地址2">
+                             <div>&nbsp;</div>
+                             <input name="city" class="city" placeholder="城市/乡村">
+                             <input name="state" class="state" placeholder="省份">
+                             <input name="zip" class="zip" placeholder="邮政编码">
+                             <div>&nbsp;</div>
+                             <select name="country">
+                                 <option value="0">国家</option>
+                                 <option value="CH">中国</option>
+                                 <option value="Qing">大清没亡</option>
+                             </select>
+                         </li>
+                         <li>
+                             <label>
+                                 <div>家庭电话</div>
+                                 <input type="tel" name="homephone">
+                             </label>
+                         </li>
+                         <li>
+                             <lable>
+                                 <div>手机</div>
+                                 <input type="tel" name="cellphone">
+                             </lable>
+                         </li>
+                         <li>
+                             <label>
+                                 <div>QQ</div>
+                                 <input name="QQ">
+                             </label>
+                         </li>
+                         <li>
+                             <label>
+                                 <div>微博</div>
+                                 <span class="weibo">@</span>
+                                 <input name="weibo" class="twitter">
+                             </label>
+                         </li>
+                     </ul>
+            </fieldset>
+            <fieldset>
+                 <!--登陆页面-->
+                <!--表单中的required属性，不可以留白的部分-->
+                <legend>登陆</legend>
+                <ul>
+                    <li>
+                        <label class="required">
+                            <div>密码</div>
+                            <input type="password" name="password" required>
+                        </label>
+                    </li>
+                    <li>
+                        <label class="required">
+                            <div>确认密码</div>
+                            <input type="password" name="confirm_password" required>
+                        </label>
+                    </li>
+                </ul>
+            </fieldset>
+            <!--使用number输入类型，min，max，data-*输入属性，以及<output>元素来构建具备计算功能的表单-->
+                <fieldset>
+                    <legend>订单明细</legend>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>产品编码</th>
+                                <th>描述</th>
+                                <th>Qty</th>
+                                <th>价格</th>
+                                <th>总计</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    COMP001
+                                    <input type="hidden" name="product_code" value="COMP001">
+                                </td>
+                                <td>智能手机</td>
+                                <td>
+                                    <input type="number" data-price="399.9" name="quantity" value="0" min="0" max="99" maxlength="2">
+                                </td>
+                                <td>$399.9</td>
+                                <output name="item_total" class="item_total">$0.00</output>
+                            </tr>
+                            <tr>
+                                <td>
+                                    COMP002
+                                    <input="hidden" name="product_code" value="COMP002">
+                                </td>
+                                <td>平板电脑</td>
+                                <td>
+                                    <input type="number" data-price="499.99" name="quantity" value="0" min="0" max="99" maxlength="2">
+                                </td>
+                                <td>499.99</td>
+                                <output name="item_total" class="item_total">$0.00</output>
+                            </tr>
+                            <tr>
+                                    <td>
+                                        COMP003
+                                        <input="hidden" name="product_code" value="COMP003">
+                                    </td>
+                                    <td>上网本</td>
+                                    <td>
+                                        <input type="number" data-price="299.99" name="quantity" value="0" min="0" max="99" maxlength="2">
+                                    </td>
+                                    <td>299.99</td>
+                                    <output name="item_total" class="item_total">$0.00</output>
+                                </tr>
+                        </tbody>
+                        <tfoot>
+                            <tr>
+                                <td colspan="4">消费总额</td>
+                                <td>
+                                    <output name="order_total" id="order_total">$0.00</output>
+                                </td>
+                            </tr>
+                        </tfoot>
+                    </table>
+                </fieldset>
+            <div class="button">
+                <input type="submit" value="提交订单">
+                <input type="submit" value="保存订单">
+            </div>
+            </form>
+        </body>
+    </head>
+</html>
