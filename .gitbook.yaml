@@ -1,8 +1,8 @@
 root: ./docs/
 ​
 structure:
-  readme: ./docs/product/README.md
-  summary: ./docs/product/SUMMARY.md
+  readme: ./product/README.md
+  summary: ./product/SUMMARY.md
 ​
 redirects:
   help/contact: ./docs/contact.md
