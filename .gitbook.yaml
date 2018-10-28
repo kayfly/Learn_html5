@@ -4,5 +4,5 @@ structure:
   readme: ./product/README.md
   summary: ./product/SUMMARY.md
 ​
-redirects:
-  help/contact: ./contact.md
+#redirects:
+  #help/contact: ./contact.md
