@@ -1,4 +1,4 @@
 # Table of contents
 
-* [Initial page](README.md)
+* [HTML5 IN ACTION](README.md)
 
