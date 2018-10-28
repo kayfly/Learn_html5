@@ -149,9 +149,40 @@
                         </tfoot>
                     </table>
                 </fieldset>
+                <!--付款明细（日期选择器）-->
+                <fieldset>
+                    <legend>付款明细</legend>
+                    <ul>
+                        <li>
+                            <label class="required">
+                                <div>信用卡持有人</div>
+                                <input name="card_name" required>
+                            </label>
+                        </li>
+                        <li>
+                            <lable class="required">
+                                <div>信用卡号</div>
+                                <input name="card_number" pattern="[0-9]{13,16}" maxlength="16" required title="13-16 无空格">
+                            </lable>
+                        </li>
+                        <li>
+                            <lable class="required">
+                                <div>到期日期</div>
+                                <input type="month" name="card_expiry" maxlength="7" placeholder="YYYY-MM" required value="2015-6">
+                            </lable>
+                        </li>
+                        <li>
+                            <lable class="required">
+                                <div>CVV2 No.</div>
+                                <input name="card_cvv2" class="cvv" pattern="[0-9]{3}" maxlength="3" required title="三位数字">
+                                <span>（卡后面的三位数字）</span>
+                            </lable>
+                        </li>
+                    </ul>
+                </fieldset>
             <div class="button">
                 <input type="submit" value="提交订单">
-                <input type="submit" value="保存订单">
+                <input type="submit" id="saveOrder" value="保存订单" formnovalidate formaction="/save">
             </div>
             </form>
         </body>

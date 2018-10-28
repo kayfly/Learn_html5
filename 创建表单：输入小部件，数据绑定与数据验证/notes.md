@@ -4,6 +4,26 @@
 
 2, <legend> legend 元素为 fieldset 元素定义标题（caption）
 
-3, data-*任意的键/值对数据都能绑定到某一元素上。JavaScript随后会读取这一数据进行计算并执行客户端操作。
+3, data-*任意的键/值对数据都能绑定到某一元素上。JavaScript随后会读取这一数据进行计算并执行客户端操作
 
 4, <output> 将输出结果显示给用户
+
+5, formnovalidate 属性绕开验证操作
+
+<!DOCTYPE html>
+<html lang="ch">
+<head>
+  <body>
+    <fieldset>
+      <legend>Title</legend>
+        <ul>
+          <li>
+            <lable>
+              <div>Title2<div/>
+              <input>
+            </lable>
+          </li>
+        </ul>
+    </fieldset>
+  </body>
+</head>
