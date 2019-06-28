@@ -118,7 +118,7 @@ Publisher: Manning
 
             this.create();
         },
-
+        //create() only outputs the set parameters so the screen’s text can be adjusted as necessary.
         create: function() {
             // Background
             ctx.fillStyle = 'black';
@@ -298,6 +298,7 @@ Publisher: Manning
         h: 15,
         init: function() {
             this.row = 2 + Game.levelLimit(Hud.lv);
+            //Only line changed in this method so you prevent bricks from overflowing on the screen.
             this.total = 0;
 
             // Create an updatable brick array = number of bricks
